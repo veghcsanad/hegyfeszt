@@ -1,0 +1,211 @@
+/* ============================================================
+   NOVA FEST — Schedule Page Styles
+   ============================================================ */
+
+.schedule-section { background: var(--steel-dark); }
+
+/* ---------- Day Tabs ---------- */
+.schedule-tabs {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 2rem;
+  border-bottom: 1px solid rgba(240,237,248,0.08);
+  padding-bottom: 0;
+  overflow-x: auto;
+}
+
+.schedule-tab {
+  font-family: var(--font-body);
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  padding: 0.85rem 1.75rem;
+  border-radius: var(--radius) var(--radius) 0 0;
+  border: 1px solid transparent;
+  border-bottom: none;
+  cursor: pointer;
+  position: relative;
+  transition: color 0.2s, background 0.2s;
+  white-space: nowrap;
+  background: none;
+}
+
+.schedule-tab::after {
+  content: '';
+  position: absolute;
+  bottom: -1px; left: 0; right: 0;
+  height: 2px;
+  background: var(--cranberry);
+  transform: scaleX(0);
+  transition: transform 0.3s var(--ease-out-expo);
+}
+
+.schedule-tab.active {
+  color: var(--text-primary);
+  background: var(--steel);
+  border-color: rgba(240,237,248,0.08);
+}
+
+.schedule-tab.active::after { transform: scaleX(1); }
+.schedule-tab:hover:not(.active) { color: var(--text-secondary); }
+
+/* ---------- Stage Filter ---------- */
+.schedule-filters {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  margin-bottom: 2rem;
+  align-items: center;
+}
+
+.filter-label {
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-right: 0.5rem;
+}
+
+.filter-btn {
+  font-family: var(--font-body);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 0.4rem 1rem;
+  border-radius: 100px;
+  border: 1.5px solid rgba(240,237,248,0.12);
+  color: var(--text-muted);
+  cursor: pointer;
+  transition: all 0.2s;
+  background: none;
+}
+
+.filter-btn:hover { border-color: var(--gray); color: var(--text-secondary); }
+
+.filter-btn.active {
+  background: var(--cranberry);
+  border-color: var(--cranberry);
+  color: #fff;
+}
+
+/* ---------- Schedule Grid ---------- */
+.schedule-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.schedule-slot {
+  display: grid;
+  grid-template-columns: 80px 140px 1fr auto;
+  align-items: center;
+  gap: 1.25rem;
+  background: var(--steel);
+  border: 1px solid rgba(240,237,248,0.06);
+  border-radius: var(--radius-lg);
+  padding: 1.25rem 1.75rem;
+  transition: border-color 0.25s, transform 0.25s var(--ease-out-expo);
+  cursor: default;
+}
+
+.schedule-slot:hover {
+  border-color: rgba(218,97,124,0.25);
+  transform: translateX(4px);
+}
+
+.schedule-slot.headliner {
+  border-color: rgba(218,97,124,0.2);
+  background: linear-gradient(90deg, rgba(218,97,124,0.06) 0%, var(--steel) 60%);
+}
+
+.schedule-slot.headliner:hover {
+  border-color: rgba(218,97,124,0.5);
+}
+
+.slot-time {
+  font-family: var(--font-display);
+  font-size: 1.4rem;
+  color: var(--text-muted);
+  letter-spacing: 0.04em;
+  min-width: 60px;
+}
+
+.headliner .slot-time { color: var(--cranberry); }
+
+.slot-stage {
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--blue);
+  white-space: nowrap;
+}
+
+.slot-artist {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  color: var(--text-primary);
+  letter-spacing: 0.02em;
+}
+
+.slot-meta {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.3rem;
+}
+
+.slot-genre {
+  font-size: 0.72rem;
+  color: var(--text-muted);
+  text-align: right;
+}
+
+.slot-duration {
+  font-size: 0.65rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  color: var(--gray);
+}
+
+/* Headliner badge */
+.slot-badge {
+  font-size: 0.6rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  padding: 0.2rem 0.6rem;
+  background: var(--cranberry);
+  color: #fff;
+  border-radius: 100px;
+  white-space: nowrap;
+}
+
+/* Hidden slots (filtered) */
+.schedule-slot.hidden {
+  display: none;
+}
+
+/* Empty state */
+.schedule-empty {
+  text-align: center;
+  padding: 4rem 2rem;
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+  .schedule-slot {
+    grid-template-columns: 64px 1fr;
+    grid-template-rows: auto auto;
+    gap: 0.5rem 1rem;
+  }
+
+  .slot-stage { grid-column: 2; }
+  .slot-artist { grid-column: 2; font-size: 1.2rem; }
+  .slot-meta { grid-column: 1 / -1; flex-direction: row; align-items: center; justify-content: space-between; }
+}

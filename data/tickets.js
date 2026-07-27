@@ -1,0 +1,77 @@
+// ============================================================
+// TICKETS DATA — edit here to update the tickets page
+// ============================================================
+
+const TICKETS_DATA = {
+  notice: "A Kaleidoszkóp Hegy Fesztivál nem tömegrendezvény, hanem találkozópont.",
+
+  tiers: [
+    {
+      id: "earlybird",
+      label: "Early bird pass",
+      price: 15000,
+      currency: "Ft",
+      availability: "limited",
+      badge: "Korlátozott",
+      description: "Early bird jegy a teljes háromnapos fesztiválra.",
+      perks: [
+        "3 napos belépés minden helyszínre",
+        "Kedvezményes ár korlátozott számban"
+      ],
+      cta: "Early bird jegy vásárlása",
+    },
+    {
+      id: "festival",
+      label: "Fesztiválpass",
+      price: 16000,
+      currency: "Ft",
+      availability: "available",
+      badge: null,
+      description: "Teljes háromnapos belépés az összes fesztiválhelyszínre.",
+      perks: [
+        "3 napos belépés minden programra"
+      ],
+      cta: "Fesztiválpass vásárlása",
+    },
+    {
+      id: "discounted",
+      label: "Kedvezményes fesztiválpass",
+      price: 14000,
+      currency: "Ft",
+      availability: "available",
+      badge: "Esztergom",
+      description: "Kedvezményes fesztiváljegy Esztergom címmel rendelkező látogatóknak.",
+      perks: [
+        "3 napos belépés minden helyszínre",
+        "Helyi kedvezmény Esztergom lakcím esetén"
+      ],
+      cta: "Kedvezményes jegy vásárlása",
+    },
+    {
+      id: "sponsor",
+      label: "Támogató jegy",
+      price: 30000,
+      currency: "Ft",
+      availability: "available",
+      badge: "Támogató",
+      description: "Támogasd a Kaleidoszkóp Ház közösségi fesztiválját.",
+      perks: [
+        "Kiemelt támogatói státusz",
+        "A fesztivál közösségének erősítése",
+        "Exkluzív köszönet",
+      ],
+      cta: "Támogató jegy vásárlása",
+    },
+  ],
+
+  addons: [
+    { id: "thursday", label: "Napi jegy", price: 8000, description: "Egynapos belépés a fesztivál csütörtöki, pénteki, vagy szombati napjára." },
+    { id: "house-pass", label: "Kaleidoszkóp Ház pass", price: 5000, description: "Belépés csak a Kaleidoszkóp Ház programjaira az egész hétvégén." },
+    { id: "house-day", label: "Kaleidoszkóp Ház napi jegy", price: 2500, description: "Egynapos belépés a Kaleidoszkóp Ház programjaira." },
+  ],
+
+  faq: [
+    { q: "Vásárolhatok csak egy napra szóló jegyet?", a: "Igen, napi jegyek elérhetők csütörtökre, péntekre és szombatra is." },
+    { q: "Minden korosztály számára nyitott az esemény?", a: "Igen! A Hegyfeszt mindenki számára nyitott. 14 év alatt ingyenes a belépés." },
+  ],
+};

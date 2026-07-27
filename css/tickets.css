@@ -1,0 +1,463 @@
+/* ============================================================
+   NOVA FEST — Tickets Page Styles
+   ============================================================ */
+
+/* ---------- Ticket Tiers ---------- */
+.tickets-section {
+  background: var(--steel-dark);
+  padding-bottom: 0;
+}
+
+.tickets-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  margin-top: 1rem;
+  align-items: end;
+}
+
+.ticket-card {
+  background: var(--steel);
+  border: 1px solid rgba(240,237,248,0.07);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s var(--ease-out-expo), box-shadow 0.3s;
+  position: relative;
+}
+
+.ticket-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 24px 60px rgba(0,0,0,0.45);
+}
+
+/* Featured card */
+.ticket-card--featured {
+  border-color: var(--cranberry);
+  box-shadow: 0 0 0 1px var(--cranberry), 0 12px 40px rgba(218,97,124,0.2);
+  transform: translateY(-8px);
+}
+
+.ticket-card--featured:hover {
+  transform: translateY(-14px);
+}
+
+/* Availability states */
+.ticket-card--limited .ticket-availability { color: #f59e0b; }
+.ticket-card--scarce  .ticket-availability { color: var(--cranberry); }
+
+/* Card badge */
+.ticket-badge {
+  position: absolute;
+  top: 1rem; right: 1rem;
+  font-size: 0.6rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 0.3rem 0.75rem;
+  border-radius: 100px;
+}
+
+.ticket-card--featured .ticket-badge {
+  background: var(--cranberry);
+  color: #fff;
+}
+
+.ticket-card--limited .ticket-badge,
+.ticket-card--scarce .ticket-badge {
+  background: rgba(245,158,11,0.15);
+  color: #f59e0b;
+  border: 1px solid rgba(245,158,11,0.3);
+}
+
+/* Card header */
+.ticket-card__header {
+  padding: 1.75rem 1.75rem 0;
+}
+
+.ticket-label {
+  font-family: var(--font-body);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--gray);
+  margin-bottom: 0.5rem;
+}
+
+.ticket-price {
+  display: flex;
+  align-items: baseline;
+  gap: 0.15rem;
+  margin-bottom: 0.5rem;
+}
+
+.ticket-currency {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  color: var(--text-muted);
+  line-height: 1;
+}
+
+.ticket-amount {
+  font-family: var(--font-display);
+  font-size: 4rem;
+  color: var(--text-primary);
+  line-height: 1;
+}
+
+.ticket-card--featured .ticket-amount { color: var(--cranberry); }
+
+.ticket-desc {
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  line-height: 1.5;
+  padding-bottom: 1.25rem;
+  border-bottom: 1px solid rgba(240,237,248,0.06);
+}
+
+/* Availability indicator */
+.ticket-availability {
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  color: #4ade80;
+  margin-top: 0.6rem;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.ticket-availability::before {
+  content: '';
+  width: 6px; height: 6px;
+  border-radius: 50%;
+  background: currentColor;
+  box-shadow: 0 0 6px currentColor;
+  animation: pulse 2s ease infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.4; }
+}
+
+/* Perks list */
+.ticket-card__perks {
+  padding: 1.25rem 1.75rem;
+  flex: 1;
+}
+
+.ticket-perk {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.6rem;
+  font-size: 0.82rem;
+  color: var(--text-secondary);
+  padding: 0.35rem 0;
+  border-bottom: 1px solid rgba(240,237,248,0.04);
+}
+
+.ticket-perk:last-child { border-bottom: none; }
+
+.perk-check {
+  color: var(--cranberry);
+  font-size: 0.75rem;
+  margin-top: 2px;
+  flex-shrink: 0;
+}
+
+/* Card CTA */
+.ticket-card__footer {
+  padding: 1.25rem 1.75rem 1.75rem;
+}
+
+.ticket-cta {
+  display: block;
+  width: 100%;
+  text-align: center;
+  font-family: var(--font-body);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 0.9rem 1rem;
+  border-radius: var(--radius);
+  transition: all 0.2s;
+  cursor: pointer;
+}
+
+.ticket-card--featured .ticket-cta {
+  background: var(--cranberry);
+  color: #fff;
+  border: none;
+  box-shadow: 0 4px 20px rgba(218,97,124,0.35);
+}
+
+.ticket-card--featured .ticket-cta:hover {
+  background: #e8748d;
+  box-shadow: 0 6px 28px rgba(218,97,124,0.5);
+  transform: translateY(-1px);
+}
+
+.ticket-card:not(.ticket-card--featured) .ticket-cta {
+  background: transparent;
+  color: var(--text-primary);
+  border: 1.5px solid rgba(240,237,248,0.15);
+}
+
+.ticket-card:not(.ticket-card--featured) .ticket-cta:hover {
+  border-color: rgba(240,237,248,0.4);
+  background: rgba(240,237,248,0.04);
+}
+
+@media (max-width: 1024px) {
+  .tickets-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .ticket-card--featured { transform: none; }
+  .ticket-card--featured:hover { transform: translateY(-6px); }
+}
+
+@media (max-width: 580px) {
+  .tickets-grid { grid-template-columns: 1fr; }
+}
+
+.external-links-section {
+  padding: clamp(2rem, 5vw, 3.5rem) 0;
+}
+
+.tickets-overview {
+  margin-top: 1rem;
+  max-width: 760px;
+  color: var(--text-secondary);
+  line-height: 1.9;
+  font-size: 0.95rem;
+}
+
+.ticket-highlights {
+  margin-top: 1.25rem;
+  padding: 1.5rem 1.5rem 1rem;
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(240,237,248,0.08);
+  border-radius: var(--radius-lg);
+  max-width: 760px;
+}
+
+.ticket-highlights p {
+  margin: 0.5rem 0;
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+}
+
+.ticket-highlights strong {
+  color: var(--text-primary);
+}
+
+.link-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.link-buttons .btn {
+  min-width: 220px;
+}
+
+@media (max-width: 640px) {
+  .link-buttons { flex-direction: column; }
+}
+
+.page-tabs {
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: 0.85rem;
+  margin-top: 1.75rem;
+}
+
+.page-tab {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.85rem 1.2rem;
+  border-radius: var(--radius);
+  border: 1px solid rgba(240,237,248,0.12);
+  background: rgba(255,255,255,0.04);
+  color: var(--text-primary);
+  font-size: 0.9rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition: background 0.2s, border-color 0.2s, color 0.2s;
+}
+
+.page-tab:hover {
+  background: rgba(255,255,255,0.08);
+}
+
+.page-tab--active {
+  background: var(--cranberry);
+  border-color: transparent;
+  color: #fff;
+}
+
+/* ---------- Add-ons ---------- */
+.addons-section {
+  background: var(--steel-dark);
+  padding-top: clamp(3rem, 6vw, 5rem);
+}
+
+.addons-title {
+  font-size: clamp(2rem, 4vw, 3rem);
+  color: var(--text-primary);
+  margin-bottom: 2rem;
+}
+
+.addons-title .serif { color: var(--blue); }
+
+.addons-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+}
+
+.addon-card {
+  background: var(--steel);
+  border: 1px solid rgba(240,237,248,0.06);
+  border-radius: var(--radius-lg);
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  transition: border-color 0.25s, transform 0.25s var(--ease-out-expo);
+}
+
+.addon-card:hover {
+  border-color: rgba(62,112,159,0.35);
+  transform: translateY(-3px);
+}
+
+.addon-label {
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.addon-desc {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  line-height: 1.5;
+  flex: 1;
+}
+
+.addon-price {
+  font-family: var(--font-display);
+  font-size: 1.6rem;
+  color: var(--blue);
+  margin-top: 0.25rem;
+}
+
+.addon-cta {
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--blue);
+  border: 1.5px solid rgba(62,112,159,0.4);
+  border-radius: var(--radius);
+  padding: 0.5rem;
+  text-align: center;
+  cursor: pointer;
+  background: none;
+  width: 100%;
+  transition: background 0.2s, color 0.2s;
+}
+
+.addon-cta:hover {
+  background: var(--blue);
+  color: #fff;
+}
+
+@media (max-width: 900px) {
+  .addons-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 540px) {
+  .addons-grid { grid-template-columns: 1fr; }
+}
+
+/* ---------- FAQ ---------- */
+.faq-section {
+  background: var(--steel);
+  padding: clamp(3rem, 6vw, 5rem) 0;
+}
+
+.faq-inner {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 4rem;
+  align-items: start;
+}
+
+.faq-title {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  color: var(--text-primary);
+  line-height: 1;
+  position: sticky;
+  top: calc(var(--nav-height) + 2rem);
+}
+
+.faq-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.faq-item {
+  border-bottom: 1px solid rgba(240,237,248,0.08);
+}
+
+.faq-question {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.25rem 0;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  cursor: pointer;
+  user-select: none;
+}
+
+.faq-question:hover { color: var(--cranberry); }
+
+.faq-icon {
+  font-size: 1.2rem;
+  color: var(--cranberry);
+  transition: transform 0.3s;
+  flex-shrink: 0;
+}
+
+.faq-item.open .faq-icon { transform: rotate(45deg); }
+
+.faq-answer {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  line-height: 1.75;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s var(--ease-out-expo), padding 0.3s;
+}
+
+.faq-item.open .faq-answer {
+  max-height: 200px;
+  padding-bottom: 1.25rem;
+}
+
+@media (max-width: 768px) {
+  .faq-inner { grid-template-columns: 1fr; gap: 2rem; }
+  .faq-title { position: static; }
+}
