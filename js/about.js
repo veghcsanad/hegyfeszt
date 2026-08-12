@@ -3,8 +3,10 @@
 // ============================================================
 
 document.addEventListener('DOMContentLoaded', () => {
+  document.title = ABOUT_DATA.meta.title;
   buildNav('about.html');
   buildFooter();
+  buildPageHeader();
   buildStory();
   buildValues();
   buildTeam();
@@ -14,6 +16,24 @@ document.addEventListener('DOMContentLoaded', () => {
   initReveal();
   initCountUp();
 });
+
+function buildPageHeader() {
+  const page = ABOUT_DATA.page;
+  const sectionLabel = document.getElementById('aboutPageSectionLabel');
+  const title = document.getElementById('aboutPageTitle');
+  const image = document.getElementById('aboutPageImage');
+  const supportLabel = document.getElementById('supportSectionLabel');
+  const impressumLabel = document.getElementById('impressumSectionLabel');
+
+  if (sectionLabel) sectionLabel.textContent = page.sectionLabel;
+  if (title) title.textContent = page.title;
+  if (image) {
+    image.src = page.image.src;
+    image.alt = page.image.alt;
+  }
+  if (supportLabel) supportLabel.textContent = page.supportLabel;
+  if (impressumLabel) impressumLabel.textContent = page.impressumLabel;
+}
 
 function buildStory() {
   const d = ABOUT_DATA.story;
@@ -73,7 +93,7 @@ function buildVenue() {
   const v = ABOUT_DATA.venue;
 
   document.getElementById('venueText').innerHTML = `
-    <div class="section-label" style="margin-bottom:1rem;">A helyszín</div>
+   <div class="section-label" style="margin-bottom:1rem;">${ABOUT_DATA.page.venueLabel}</div>
     <h2 class="venue-name">${v.name}</h2>
     <div class="venue-address">📍 ${v.address}</div>
     <p class="venue-desc">${v.description}</p>

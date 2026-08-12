@@ -11,7 +11,7 @@ function buildNav(activePage) {
   inner.className = 'nav__inner';
 
   inner.innerHTML = `
-    <a class="nav__logo" href="index.html"><img src="logo.png" alt="Hegyfeszt logo" />HEGY<span>.</span>FESZT</a>
+    <a class="nav__logo" href="index.html"><img src="${SITE.assets.logo}" alt="Hegyfeszt logo" />HEGY<span>.</span>FESZT</a>
     <ul class="nav__links" id="navLinks">
       ${SITE.nav.map(item => {
         const isActive = item.href === activePage;
@@ -55,6 +55,15 @@ function buildNav(activePage) {
   });
 }
 
+function buildLocationLink() {
+  const href = SITE.locationUrl;
+  if (!href) {
+    return SITE.location;
+  }
+
+  return `<a class="footer__link site-location-link" href="${href}" target="_blank" rel="noopener">${SITE.location}</a>`;
+}
+
 // ---------- Build Footer ----------
 function buildFooter() {
   const footer = document.getElementById('footer');
@@ -64,7 +73,7 @@ function buildFooter() {
     <div class="container">
       <div class="footer__inner">
         <div>
-          <div class="footer__logo"><img src="logo.png" alt="Hegyfeszt logo" />HEGY<span>.</span>FESZT</div>
+          <div class="footer__logo"><img src="${SITE.assets.logo}" alt="Hegyfeszt logo" />HEGY<span>.</span>FESZT</div>
           <p class="footer__desc">${SITE.tagline}.</p>
         </div>
         <div>
@@ -82,7 +91,7 @@ function buildFooter() {
           <ul class="footer__links">
             <li><a class="footer__link" href="mailto:${SITE.email}">${SITE.email}</a></li>
             <li><span class="footer__link">${SITE.phone}</span></li>
-            <li style="margin-top:0.5rem"><span class="footer__link">${SITE.location}</span></li>
+            <li style="margin-top:0.5rem">${buildLocationLink()}</li>
           </ul>
         </div>
       </div>

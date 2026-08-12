@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Hegyfeszt 2026 — Kaleidoszkóp Hegy Fesztivál</title>
+  <title></title>
   <link rel="stylesheet" href="css/global.css">
   <link rel="stylesheet" href="css/home.css">
 </head>
@@ -32,7 +32,7 @@
           <div class="hero__ctas reveal reveal-delay-3" id="heroCtas"></div>
           <div class="hero__countdown-inline reveal reveal-delay-4" id="heroCountdownInline">
             <div class="countdown__inner">
-              <div class="countdown__label">A fesztivál kezdéséig</div>
+              <div class="countdown__label" id="heroCountdownLabel"></div>
               <div class="countdown__units" id="countdownUnitsInline"></div>
             </div>
           </div>
@@ -40,7 +40,7 @@
       </div>
     </div>
     <div class="hero__scroll">
-      <span>Scroll</span>
+      <span id="heroScrollLabel"></span>
       <div class="hero__scroll-line"></div>
     </div>
   </section>
@@ -49,7 +49,7 @@
   <section class="features">
     <div class="container">
       <div class="features__header">
-        <h2 class="features__title reveal reveal-delay-1">Három nap.<br><span class="serif">Végtelen emlék.</span></h2>
+        <h2 class="features__title reveal reveal-delay-1" id="featuresTitle"></h2>
       </div>
       <div class="features__grid reveal reveal-delay-2" id="featuresGrid"></div>
     </div>
@@ -60,9 +60,9 @@
     <div class="glow-cranberry" style="top:50%;left:50%;transform:translate(-50%,-50%);width:700px;height:400px;"></div>
     <div class="container cta-band__inner reveal">
       <div class="cta-band__text">
-        <h2 class="cta-band__title">Ne maradj le.</h2>
+        <h2 class="cta-band__title" id="ctaBandTitle"></h2>
       </div>
-      <a class="btn btn--primary" href="tickets.html">Jegyek most</a>
+      <a class="btn btn--primary" href="tickets.html" id="ctaBandLink"></a>
     </div>
   </section>
 

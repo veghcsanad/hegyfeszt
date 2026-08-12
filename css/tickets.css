@@ -13,7 +13,7 @@
   grid-template-columns: repeat(4, 1fr);
   gap: 1rem;
   margin-top: 1rem;
-  align-items: end;
+  align-items: stretch;
 }
 
 .ticket-card {
@@ -25,6 +25,7 @@
   flex-direction: column;
   transition: transform 0.3s var(--ease-out-expo), box-shadow 0.3s;
   position: relative;
+  height: 100%;
 }
 
 .ticket-card:hover {
@@ -386,6 +387,59 @@
 
 @media (max-width: 540px) {
   .addons-grid { grid-template-columns: 1fr; }
+}
+
+/* ---------- Camping ---------- */
+.camping-section {
+  background: var(--steel);
+  padding-top: clamp(3rem, 6vw, 5rem);
+}
+
+.camping-title {
+  font-size: clamp(2rem, 4vw, 3rem);
+  color: var(--text-primary);
+  margin-bottom: 1rem;
+}
+
+.camping-intro {
+  max-width: 760px;
+  color: var(--text-secondary);
+  line-height: 1.8;
+  margin-bottom: 1.25rem;
+}
+
+.camping-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+.camping-card {
+  min-height: 100%;
+}
+
+.camping-note {
+  margin-top: 1rem;
+  max-width: 760px;
+  color: var(--text-muted);
+  line-height: 1.7;
+  font-size: 0.9rem;
+}
+
+.camping-link {
+  margin-top: 1rem;
+  width: fit-content;
+}
+
+@media (max-width: 540px) {
+  .camping-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .camping-link {
+    width: 100%;
+    justify-content: center;
+  }
 }
 
 /* ---------- FAQ ---------- */

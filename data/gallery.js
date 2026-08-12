@@ -3,8 +3,15 @@
 // ============================================================
 
 const GALLERY_DATA = {
-  title: "Hegyfeszt Galéria",
-  subtitle: "Pillanatképek a fesztivál életéből.",
+  meta: {
+    title: "Galéria — Hegyfeszt 2026",
+  },
+  page: {
+    sectionLabel: "Hegyfeszt",
+    title: "Galéria",
+    subtitle: "Pillanatképek a fesztivál életéből.",
+    credit: "A fotók: Reuter Réka & Partos Bandi.",
+  },
   images: [
     "images/HegyfesztRR-79.jpg",
     "images/HegyfesztRR-76.jpg",

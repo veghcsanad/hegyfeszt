@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Önkéntesség — Hegyfeszt 2026</title>
+  <title></title>
   <link rel="stylesheet" href="css/global.css">
   <link rel="stylesheet" href="css/volunteers.css">
 </head>
@@ -13,9 +13,9 @@
 
   <header class="page-header">
     <div class="container">
-      <div class="section-label">Csatlakozz hozzánk!</div>
-      <h1 class="page-header__title">Önkéntesség</h1>
-      <p class="page-header__sub">Legyél részese egy szuperaktív közösségnek!</p>
+      <div class="section-label" id="volunteersPageSectionLabel"></div>
+      <h1 class="page-header__title" id="volunteersPageTitle"></h1>
+      <p class="page-header__sub" id="volunteersPageSubtitle"></p>
     </div>
   </header>
 
@@ -23,7 +23,12 @@
   <section class="volunteer-intro">
     <div class="container">
       <div class="volunteer-intro-content reveal">
-        <p class="volunteer-intro-text">Ha érdekel a kortárs kultúra világa, szeretnél belelátni egy fesztivál szervezésének folyamataiba és aktívan hozzájárulni annak lebonyolításához, sok szeretettel várunk a csapatunkba!</p>
+        <div class="volunteer-intro-copy">
+          <p class="volunteer-intro-text" id="volunteerIntroText"></p>
+        </div>
+        <div class="volunteer-intro-media">
+          <img class="volunteer-intro-image" id="volunteerIntroImage" src="images/volunteer.jpg" alt="Hegyfeszt önkéntesek">
+        </div>
       </div>
     </div>
   </section>
@@ -31,7 +36,7 @@
   <!-- Tasks -->
   <section class="volunteer-tasks">
     <div class="container">
-      <h2 class="tasks-title reveal reveal-delay-1">Feladatok, amikben szükség lesz a segítségedre</h2>
+      <h2 class="tasks-title reveal reveal-delay-1" id="volunteerTasksTitle"></h2>
       <div class="tasks-grid reveal reveal-delay-2" id="tasksGrid"></div>
     </div>
   </section>
@@ -41,10 +46,10 @@
     <div class="glow-cranberry" style="top:50%;left:50%;transform:translate(-50%,-50%);width:700px;height:400px;"></div>
     <div class="container volunteer-cta-inner reveal">
       <div class="volunteer-cta-text">
-        <h2 class="volunteer-cta-title">🫆 Készen állsz?</h2>
-        <p class="volunteer-cta-sub">Ha szabad vagy augusztus utolsó hetében, és szeretnél egy szuper közösség tagjává válni, jelentkezz most - mi pedig felvesszük veled a kapcsolatot és minden vonatkozó részletről és tudnivalóról tájékoztatunk!</p>
+        <h2 class="volunteer-cta-title" id="volunteerCtaTitle"></h2>
+        <p class="volunteer-cta-sub" id="volunteerCtaSub"></p>
       </div>
-      <a class="btn btn--primary" href="https://docs.google.com/forms/d/e/1FAIpQLSeBC9q8zxwrTE34HDryfhAxuuTcMNxsACRN2H6rkZcZdWPC8Q/viewform" target="_blank">Jelentkezz most</a>
+      <a class="btn btn--primary" href="#" target="_blank" id="volunteerCtaLink"></a>
     </div>
   </section>
 

@@ -3,6 +3,16 @@
 // ============================================================
 
 const PROGRAMS_DATA = {
+  meta: {
+    title: "Programok — Hegyfeszt 2026",
+  },
+  page: {
+    sectionLabel: "Fellépők és események",
+    title: "Programok",
+    subtitle: "Azok az előadók és élmények, amelyek a Hegyfesztet felejthetetlenné teszik.",
+    artistsLabel: "Fellépők",
+    programsTitle: "Több mint egy <span class=\"serif\">koncert</span>",
+  },
   artists: [
     {
       id: "deva",

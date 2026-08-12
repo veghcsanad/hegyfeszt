@@ -3,11 +3,16 @@
 // ============================================================
 
 const HOME_DATA = {
+  meta: {
+    title: "Hegyfeszt 2026 — Kaleidoszkóp Hegy Fesztivál",
+  },
   hero: {
-    headline: ["HEGY", "Fesztivál"],
+    headline: [""],
     subheadline: "2026. augusztus 27–29. · Esztergomi Várhegy és Kaleidoszkóp Ház",
     cta_primary:  { label: "Jegyek", href: "tickets.html" },
     cta_secondary: { label: "Programok", href: "programs.html" },
+    countdownLabel: "A fesztivál kezdéséig",
+    scrollLabel: "Scroll",
   },
 
   countdown: {
@@ -25,6 +30,12 @@ const HOME_DATA = {
     label: "11. alkalom",
     text: "Augusztus 27–29. között három napos közösségi fesztivál Esztergomban.",
     link: { label: "Jegyek →", href: "tickets.html" },
+  },
+
+  sections: {
+    featuresTitle: "Hegyfeszt.<br><span class=\"serif\">Alapfogalom. Nem definiáljuk.</span>",
+    ctaBandTitle: "Ne maradj le.",
+    ctaBandCtaLabel: "Jegyek most",
   },
 
   features: [

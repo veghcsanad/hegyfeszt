@@ -6,12 +6,25 @@ let activeDay   = 0;
 let activeStage = 'all';
 
 document.addEventListener('DOMContentLoaded', () => {
+  document.title = SCHEDULE_DATA.meta.title;
   buildNav('schedule.html');
   buildFooter();
+  renderPageHeader();
   renderTabs();
   renderFilters();
   renderSlots();
 });
+
+function renderPageHeader() {
+  const page = SCHEDULE_DATA.page;
+  const sectionLabel = document.getElementById('schedulePageSectionLabel');
+  const title = document.getElementById('schedulePageTitle');
+  const subtitle = document.getElementById('schedulePageSubtitle');
+
+  if (sectionLabel) sectionLabel.textContent = page.sectionLabel;
+  if (title) title.textContent = page.title;
+  if (subtitle) subtitle.textContent = page.subtitle;
+}
 
 function renderTabs() {
   const container = document.getElementById('scheduleTabs');
@@ -75,7 +88,6 @@ function renderSlots() {
       <div class="slot-meta">
         ${isHeadliner(slot) ? `<span class="slot-badge">Főfellépő</span>` : ''}
         <span class="slot-genre">${slot.genre.replace(/(Headliner|Főfellépő) \/ /,'')}</span>
-        <span class="slot-duration">${slot.duration} perc</span>
       </div>
     </div>
   `).join('');

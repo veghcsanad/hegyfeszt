@@ -3,11 +3,13 @@
 // ============================================================
 
 document.addEventListener('DOMContentLoaded', () => {
+  document.title = HOME_DATA.meta.title;
   buildNav('index.html');
   buildFooter();
   buildHero();
   buildCountdown();
   buildFeatures();
+  buildSectionCopy();
   initReveal();
 });
 
@@ -26,29 +28,32 @@ function buildHero() {
 
   // Edition tag
   document.getElementById('heroEdition').textContent = SITE.edition;
-
+ 
   // Location
-  document.getElementById('heroLocation').textContent = `📍 ${SITE.location}`;
-
+  const heroLocation = document.getElementById('heroLocation');
+  if (heroLocation) {
+    heroLocation.innerHTML = `📍 ${buildLocationLink()}`;
+  }
+ 
   // Headline with logo
-  document.getElementById('heroHeadline').innerHTML =
-    `<img src="logo_red.png" alt="Hegyfeszt" class="hero-logo" />`;
-
-
+  document.getElementById('heroHeadline').innerHTML = `
+    <img src="${SITE.assets.logoLineup}" alt="Hegyfeszt" class="hero-logo" />
+    <span class="hero__headline-text">${d.hero.headline.join('')}</span>
+  `;
+ 
   // Sub
   document.getElementById('heroSub').textContent = d.hero.subheadline;
 
-  // CTAs
+  // CTAs removed from the hero
   const ctaEl = document.getElementById('heroCtas');
-  ctaEl.innerHTML = `
-    <a class="btn btn--primary" href="${d.hero.cta_primary.href}">${d.hero.cta_primary.label}</a>
-    <a class="btn btn--secondary" href="${d.hero.cta_secondary.href}">${d.hero.cta_secondary.label}</a>
-  `;
+  if (ctaEl) ctaEl.innerHTML = '';
 }
 
 function buildCountdown() {
   const targetDate = new Date(HOME_DATA.countdown.targetDate);
   const container = document.getElementById('countdownUnitsInline');
+  const label = document.getElementById('heroCountdownLabel');
+  if (label) label.textContent = HOME_DATA.hero.countdownLabel;
 
   function pad(n) { return String(n).padStart(2, '0'); }
 
@@ -109,4 +114,20 @@ function buildFeatures() {
       <p class="feature-card__body">${f.body}</p>
     </div>
   `).join('');
+}
+
+function buildSectionCopy() {
+  const title = document.getElementById('featuresTitle');
+  if (title) title.innerHTML = HOME_DATA.sections.featuresTitle;
+
+  const ctaTitle = document.getElementById('ctaBandTitle');
+  if (ctaTitle) ctaTitle.textContent = HOME_DATA.sections.ctaBandTitle;
+
+  const ctaLink = document.getElementById('ctaBandLink');
+  if (ctaLink) {
+    ctaLink.textContent = HOME_DATA.sections.ctaBandCtaLabel;
+  }
+
+  const scrollLabel = document.getElementById('heroScrollLabel');
+  if (scrollLabel) scrollLabel.textContent = HOME_DATA.hero.scrollLabel;
 }

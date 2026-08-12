@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Galéria — Hegyfeszt 2026</title>
+  <title></title>
   <link rel="stylesheet" href="css/global.css">
   <link rel="stylesheet" href="css/gallery.css">
 </head>
@@ -13,17 +13,23 @@
 
   <header class="page-header gallery-page">
     <div class="container">
-      <div class="section-label">Hegyfeszt</div>
-      <h1 class="page-header__title" id="galleryHeading">Galéria</h1>
-      <p class="page-header__sub" id="gallerySub">Pillanatképek a fesztivál életéből.</p>
+      <div class="section-label" id="gallerySectionLabel"></div>
+      <h1 class="page-header__title" id="galleryHeading"></h1>
+      <p class="page-header__sub" id="gallerySub"></p>
     </div>
   </header>
 
   <section class="gallery-section">
     <div class="container">
+      <p class="gallery-credit reveal" id="galleryCredit"></p>
       <div class="gallery-grid" id="galleryGrid"></div>
     </div>
   </section>
+
+  <div class="gallery-modal" id="galleryModal" aria-hidden="true">
+    <button class="gallery-modal__close" id="galleryModalClose" type="button" aria-label="Bezárás">×</button>
+    <img class="gallery-modal__image" id="galleryModalImage" alt="">
+  </div>
 
   <footer class="footer" id="footer"></footer>
 

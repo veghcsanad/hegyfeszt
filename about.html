@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Rólunk — Hegyfeszt 2026</title>
+  <title></title>
   <link rel="stylesheet" href="css/global.css">
   <link rel="stylesheet" href="css/about.css">
 </head>
@@ -13,14 +13,17 @@
 
   <header class="page-header">
     <div class="container">
-      <div class="section-label">Történetünk</div>
-      <h1 class="page-header__title">Rólunk</h1>
+      <div class="section-label" id="aboutPageSectionLabel"></div>
+      <h1 class="page-header__title" id="aboutPageTitle"></h1>
     </div>
   </header>
 
   <!-- Story -->
   <section class="story-section">
     <div class="container story-inner">
+      <figure class="about-image-wrap reveal">
+        <img id="aboutPageImage" class="about-image" src="images/about.jpg" alt="Hegyfeszt és a Kaleidoszkóp Ház">
+      </figure>
       <div class="story-text" id="storyText"></div>
       <div class="story-stats" id="storyStats"></div>
     </div>
@@ -28,28 +31,7 @@
 
   <div class="divider"></div>
 
-  <!-- Values
-  <section class="values-section">
-    <div class="container">
-      <div class="section-label reveal">Értékeink</div>
-      <h2 class="values-title reveal reveal-delay-1">Pontokba <span class="serif">szedve</span></h2>
-      <div class="values-grid reveal reveal-delay-2" id="valuesGrid"></div>
-    </div>
-  </section> -->
-
   <div class="divider"></div>
-
-  <!-- Team 
-  <section class="team-section">
-    <div class="container">
-      <div class="section-label reveal">A csapat</div>
-      <h2 class="team-title reveal reveal-delay-1">Ismerd meg a <span class="serif">csapatot</span></h2>
-      <div class="team-grid reveal reveal-delay-2" id="teamGrid"></div>
-    </div>
-  </section>
-
-  <div class="divider"></div> -->
-
   <!-- Venue -->
   <section class="venue-section">
     <div class="container">
@@ -63,7 +45,7 @@
   <!-- Support -->
   <section class="support-section">
     <div class="container">
-      <div class="section-label reveal">Támogatás</div>
+      <div class="section-label reveal" id="supportSectionLabel"></div>
       <div class="support-content reveal reveal-delay-1" id="supportContent"></div>
     </div>
   </section>
@@ -71,7 +53,7 @@
   <!-- Impresszum -->
   <section class="impresszum-section">
     <div class="container">
-      <div class="section-label reveal">Impresszum</div>
+      <div class="section-label reveal" id="impressumSectionLabel"></div>
       <div class="impressum-content reveal reveal-delay-1" id="impressumContent"></div>
     </div>
   </section>

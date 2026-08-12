@@ -440,6 +440,11 @@ body::before {
 
 .footer__link:hover { color: var(--cranberry); }
 
+.site-location-link {
+  text-decoration: underline;
+  text-underline-offset: 0.18em;
+}
+
 .footer__bottom {
   margin-top: 3rem;
   padding-top: 1.5rem;

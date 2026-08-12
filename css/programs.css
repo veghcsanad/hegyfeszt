@@ -2,6 +2,25 @@
    NOVA FEST — Programs Page Styles
    ============================================================ */
 
+.programs-hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  background: var(--steel-dark);
+  padding: calc(var(--nav-height) + 2rem) 0 4rem;
+}
+
+.programs-hero .container {
+  display: flex;
+  justify-content: center;
+}
+
+.programs-hero__image {
+  width: min(100%, 1200px);
+  height: auto;
+  display: block;
+}
+
 /* ---------- Artists ---------- */
 .artists-section { background: var(--steel-dark); }
 

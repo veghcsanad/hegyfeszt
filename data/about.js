@@ -3,15 +3,27 @@
 // ============================================================
 
 const ABOUT_DATA = {
+  meta: {
+    title: "Rólunk — Hegyfeszt 2026",
+  },
+  page: {
+    sectionLabel: "Történetünk",
+    title: "Rólunk",
+    supportLabel: "Támogatás",
+    impressumLabel: "Impresszum",
+    venueLabel: "A helyszín",
+    image: {
+      src: "images/about.jpg",
+      alt: "Hegyfeszt és a Kaleidoszkóp Ház",
+    },
+  },
   story: {
-    heading: "Határtalan kulturális találkozás",
+    heading: "Hegyfeszt — Kortárs kultúra a Várhegyen",
     paragraphs: [
-      "A Kaleidoszkóp Ház immár tizenhat éve meghatározó alternatív kulturális központ Esztergomban, Budapesttől mindössze egy órányira.",
-      "Augusztus 27. és 29. között tizenegyedik alkalommal rendezzük meg a Kaleidoszkóp Hegy Fesztivált: három napos esemény, amely összekapcsolja Esztergom történelmi helyszíneit és a Kaleidoszkóp Ház közösségi szellemét.",
-      "A fesztivál a zene, a képzőművészet, a film, a színház és a közösségi programok találkozóhelye. Koncertek, éjszakai elektronikus bulik, gyerekprogramok, workshopok, designer vásár, filmvetítések, színházi előadás, slam poetry és panelbeszélgetések mellett fényművészeti installációk, kiállítások és tárlatvezetések is várnak.",
-      "A látogatók a Várhegy különleges terein – Esztergomi Vár Királynéi Kertje, Várudvar, Harangkert – és a Kaleidoszkóp Ház, a Rondella Galéria és a Keresztény Múzeum falai között fedezhetik fel Esztergom kulturális örökségét és kortárs művészeti életét.",
-      "Fellépők és közreműködők többek között: Deva, Anima Sound System DJ-szett, Óperentzia, Lenkke, Labek & Chrobak, Berlin Hotel Collective, Said Chalaban, Anyámborogass, $ick$teez, Villő, Moyogi, ZSÉ, OIEE, SunMa, Belső Parancs és Slam Poetry Esztergom.",
-      "A rendezvényt az NKA támogatja, és a szervezők fenntartják a programváltozás jogát.",
+      "A Kaleidoszkóp Ház immár tizenhat éve meghatározó alternatív kulturális központ Esztergomban, Budapesttől mindössze egy órányira. Sokszínű közösségi és alkotótér, ahol galéria, koncerthelyszín, kocsma, belső kert és terasz ad otthont a kortárs kultúra legkülönfélébb formáinak – a kísérleti filmektől és irodalmi estektől az underground zenén át a képzőművészetig.",
+      "Küldetésünk, hogy inspiráló közeget teremtsünk, ahol feltörekvő és tapasztalt művészek egyaránt lehetőséget kapnak az alkotásra, a bemutatkozásra és a kapcsolódásra. Hisszük, hogy a kultúra közösségben él igazán, ezért olyan nyitott teret építünk, ahol az ötletek, a kísérletezés és az emberi találkozások egymást erősítik.",
+      "Ennek a szemléletnek a kiterjesztése a Kaleidoszkóp Fesztivál, amelyet 2026-ban immár tizenegyedik alkalommal rendezünk meg. A fesztivál az esztergomi Várhegy történelmi tereit tölti meg kortárs művészettel és új élettel, hogy a múlt és a jelen találkozásában együtt ünnepeljük az alkotást, a magyar kortárs kultúrát és annak közösségét.",
+      "A rendezvényt az NKA támogatja, és a szervezők fenntartják a programváltozás jogát."
     ],
   },
 
@@ -43,7 +55,7 @@ const ABOUT_DATA = {
   venue: {
     name: "Esztergomi Várhegy",
     address: "2500 Esztergom, Várhegy",
-    description: "A Hegyfeszt a Várhegy és a Kaleidoszkóp Ház közösségi szellemében valósul meg. A történelmi tereket kortárs művészeti, zenei és civil programok töltik meg új élettel.",
+    description: "Kortárs kultúra egy ezeréves helyszínen. A fesztivál a múlt tisztelete mellett a jelen ünneplésére és egyben a  jövő építésére fekteti a hangsúlyt azzal, hogy a történelmi jelentőségű esztergomi várhegy tereit három napra új életre kelti a művészet és a közösség erejével. Célunk, hogy minél szélesebb összefogás mellett, a helyi értékek bemutatását és közösség erősítését is szem előtt tartva egy olyan eseménysorozatot hozzunk létre, ahol a különböző korszakok, generációk, értékek és műfajok egy térben, egymást nem kizárva, hanem kölcsönösen megerősítve létezhetnek a sokszínűségben, mindannyiunk örömére.",
     transport: [
       { mode: "🚌", label: "Helyi buszok", detail: "Esztergom központjából néhány percnyi sétára, menetrend szerint." },
       { mode: "🚗", label: "Autóval", detail: "Korlátozott parkolási lehetőség a közelben, javasolt a tömegközlekedés." },
@@ -77,6 +89,20 @@ const ABOUT_DATA = {
   },
 
   volunteer: {
+    meta: {
+      title: "Önkéntesség — Hegyfeszt 2026",
+    },
+    page: {
+      sectionLabel: "Csatlakozz hozzánk!",
+      title: "Önkéntesség",
+      subtitle: "Legyél részese egy szuperaktív közösségnek!",
+      ctaButtonLabel: "Jelentkezz most",
+      ctaUrl: "https://docs.google.com/forms/d/e/1FAIpQLSeBC9q8zxwrTE34HDryfhAxuuTcMNxsACRN2H6rkZcZdWPC8Q/viewform",
+      image: {
+        src: "images/volunteer.jpg",
+        alt: "Hegyfeszt önkéntesek",
+      },
+    },
     title: "Önkéntesség",
     intro: "🏔️ Ha érdekel a kortárs kultúra világa, szeretnél belelátni egy fesztivál szervezésének folyamataiba és aktívan hozzájárulni annak lebonyolításához, sok szeretettel várunk a csapatunkba!",
     tasks: {
