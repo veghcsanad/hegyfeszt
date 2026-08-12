@@ -14,13 +14,11 @@ function buildGallery() {
   const container = document.getElementById('galleryGrid');
   const heading = document.getElementById('galleryHeading');
   const sub = document.getElementById('gallerySub');
-  const credit = document.getElementById('galleryCredit');
-  if (!container || !heading || !sub || !credit) return;
+  if (!container || !heading || !sub) return;
 
   heading.textContent = GALLERY_DATA.page.title;
   sub.textContent = GALLERY_DATA.page.subtitle;
-  credit.textContent = GALLERY_DATA.page.credit;
-
+  
   const sectionLabel = document.getElementById('gallerySectionLabel');
   if (sectionLabel) sectionLabel.textContent = GALLERY_DATA.page.sectionLabel;
 
