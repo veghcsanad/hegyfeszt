@@ -71,23 +71,14 @@ function renderSlots() {
   const day = SCHEDULE_DATA.days[activeDay];
   const grid = document.getElementById('scheduleGrid');
 
-  // Sort by time
   const sorted = [...day.slots].sort((a, b) => a.time.localeCompare(b.time));
 
-  const isHeadliner = (s) => {
-    const genre = s.genre.toLowerCase();
-    return genre.includes('headliner') || genre.includes('főfellépő');
-  };
-
   grid.innerHTML = sorted.map(slot => `
-    <div class="schedule-slot${isHeadliner(slot) ? ' headliner' : ''}"
-         data-stage="${slot.stage}">
+    <div class="schedule-slot" data-stage="${slot.stage}">
       <div class="slot-time">${slot.time}</div>
-      <div class="slot-stage">${slot.stage}</div>
-      <div class="slot-artist">${slot.artist}</div>
-      <div class="slot-meta">
-        ${isHeadliner(slot) ? `<span class="slot-badge">Főfellépő</span>` : ''}
-        <span class="slot-genre">${slot.genre.replace(/(Headliner|Főfellépő) \/ /,'')}</span>
+      <div class="slot-body">
+        <div class="slot-artist">${slot.artist}</div>
+        <div class="slot-stage">${slot.stage}</div>
       </div>
     </div>
   `).join('');

@@ -78,6 +78,7 @@ function buildTickets() {
     available: 'Elérhető',
     limited:   'Korlátozott mennyiség',
     scarce:    'Gyorsan fogynak',
+    soldout:   'Elfogyott',
   };
 
   grid.innerHTML = TICKETS_DATA.tiers.map(t => {
@@ -85,6 +86,7 @@ function buildTickets() {
     const cardClass = [
       'ticket-card',
       isFeatured ? 'ticket-card--featured' : '',
+      t.availability === 'soldout' ? 'ticket-card--soldout' : '',
       t.availability === 'limited' ? 'ticket-card--limited' : '',
       t.availability === 'scarce'  ? 'ticket-card--scarce'  : '',
     ].filter(Boolean).join(' ');

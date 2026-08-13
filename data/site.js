@@ -24,7 +24,7 @@ const SITE = {
   },
   nav: [
     { label: "Kezdőlap",    href: "index.html" },
-    { label: "Menetrend",   href: "schedule.html" },
+    { label: "Programok",   href: "schedule.html" },
     { label: "Galéria",     href: "gallery.html" },
     { label: "Jegyek",       href: "tickets.html" },
     { label: "Önkéntesség", href: "volunteers.html" },

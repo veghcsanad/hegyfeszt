@@ -10,7 +10,7 @@ const HOME_DATA = {
     headline: [""],
     subheadline: "2026. augusztus 27–29. · Esztergomi Várhegy és Kaleidoszkóp Ház",
     cta_primary:  { label: "Jegyek", href: "tickets.html" },
-    cta_secondary: { label: "Programok", href: "programs.html" },
+    cta_secondary: { label: "Programok", href: "schedule.html" },
     countdownLabel: "A fesztivál kezdéséig",
     scrollLabel: "Scroll",
   },
@@ -20,10 +20,10 @@ const HOME_DATA = {
   },
 
   headliners: [
-    { name: "ДEVA", genre: "Elektronikus / performansz", href: "programs.html#deva" },
-    { name: "ÓPERENTZIA", genre: "World / folk", href: "programs.html#operentzia" },
-    { name: "ANIMA SOUND SYSTEM", genre: "Elektronikus / basszus", href: "programs.html#anima-sound-system" },
-    { name: "...", genre: "Teljes program", href: "programs.html" }
+    { name: "ДEVA", genre: "Elektronikus / performansz", href: "schedule.html" },
+    { name: "ÓPERENTZIA", genre: "World / folk", href: "schedule.html" },
+    { name: "ANIMA SOUND SYSTEM", genre: "Elektronikus / basszus", href: "schedule.html" },
+    { name: "...", genre: "Teljes program", href: "schedule.html" }
   ],
 
   announcement: {

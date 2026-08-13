@@ -45,6 +45,7 @@
 }
 
 /* Availability states */
+.ticket-card--soldout .ticket-availability { color: var(--cranberry); }
 .ticket-card--limited .ticket-availability { color: #f59e0b; }
 .ticket-card--scarce  .ticket-availability { color: var(--cranberry); }
 
@@ -63,6 +64,12 @@
 .ticket-card--featured .ticket-badge {
   background: var(--cranberry);
   color: #fff;
+}
+
+.ticket-card--soldout .ticket-badge {
+  background: rgba(218,97,124,0.15);
+  color: var(--cranberry);
+  border: 1px solid rgba(218,97,124,0.35);
 }
 
 .ticket-card--limited .ticket-badge,
@@ -356,7 +363,7 @@
 .addon-price {
   font-family: var(--font-display);
   font-size: 1.6rem;
-  color: var(--blue);
+  color: var(--text-primary);
   margin-top: 0.25rem;
 }
 
@@ -416,6 +423,15 @@
 
 .camping-card {
   min-height: 100%;
+}
+
+.camping-card .addon-desc {
+  color: var(--text-secondary);
+}
+
+.camping-card .addon-price {
+  color: var(--text-primary);
+  font-size: 1.75rem;
 }
 
 .camping-note {

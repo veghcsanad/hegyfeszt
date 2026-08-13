@@ -31,8 +31,8 @@ const TICKETS_DATA = {
       label: "Early bird pass",
       price: 15000,
       currency: "Ft",
-      availability: "limited",
-      badge: "Korlátozott",
+      availability: "soldout",
+      badge: "Elfogyott",
       description: "Early bird jegy a teljes háromnapos fesztiválra.",
       perks: [
         "3 napos belépés minden helyszínre",

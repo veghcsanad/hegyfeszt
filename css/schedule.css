@@ -2,6 +2,22 @@
    NOVA FEST — Schedule Page Styles
    ============================================================ */
 
+.programs-hero {
+  background: var(--steel-dark);
+  padding: calc(var(--nav-height) + 1rem) 0 0.5rem;
+}
+
+.programs-hero .container {
+  display: flex;
+  justify-content: center;
+}
+
+.programs-hero__image {
+  width: min(100%, 1200px);
+  height: auto;
+  display: block;
+}
+
 .schedule-section { background: var(--steel-dark); }
 
 /* ---------- Day Tabs ---------- */
@@ -101,7 +117,7 @@
 
 .schedule-slot {
   display: grid;
-  grid-template-columns: 80px 140px 1fr auto;
+  grid-template-columns: 80px 1fr;
   align-items: center;
   gap: 1.25rem;
   background: var(--steel);
@@ -117,32 +133,12 @@
   transform: translateX(4px);
 }
 
-.schedule-slot.headliner {
-  border-color: rgba(218,97,124,0.2);
-  background: linear-gradient(90deg, rgba(218,97,124,0.06) 0%, var(--steel) 60%);
-}
-
-.schedule-slot.headliner:hover {
-  border-color: rgba(218,97,124,0.5);
-}
-
 .slot-time {
   font-family: var(--font-display);
   font-size: 1.4rem;
   color: var(--text-muted);
   letter-spacing: 0.04em;
   min-width: 60px;
-}
-
-.headliner .slot-time { color: var(--cranberry); }
-
-.slot-stage {
-  font-size: 0.68rem;
-  font-weight: 600;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: var(--blue);
-  white-space: nowrap;
 }
 
 .slot-artist {
@@ -152,37 +148,25 @@
   letter-spacing: 0.02em;
 }
 
-.slot-meta {
+.slot-body {
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
-  gap: 0.3rem;
+  gap: 0.35rem;
 }
 
-.slot-genre {
-  font-size: 0.72rem;
-  color: var(--text-muted);
-  text-align: right;
-}
-
-.slot-duration {
-  font-size: 0.65rem;
+.slot-stage {
+  display: inline-flex;
+  align-self: flex-start;
+  font-size: 0.68rem;
   font-weight: 600;
-  letter-spacing: 0.08em;
-  color: var(--gray);
-}
-
-/* Headliner badge */
-.slot-badge {
-  font-size: 0.6rem;
-  font-weight: 700;
-  letter-spacing: 0.14em;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
-  padding: 0.2rem 0.6rem;
-  background: var(--cranberry);
-  color: #fff;
-  border-radius: 100px;
+  color: var(--cranberry);
   white-space: nowrap;
+  padding: 0.25rem 0.55rem;
+  border: 1px solid rgba(218,97,124,0.22);
+  border-radius: 999px;
+  background: rgba(218,97,124,0.08);
 }
 
 /* Hidden slots (filtered) */
@@ -201,11 +185,8 @@
 @media (max-width: 768px) {
   .schedule-slot {
     grid-template-columns: 64px 1fr;
-    grid-template-rows: auto auto;
     gap: 0.5rem 1rem;
   }
 
-  .slot-stage { grid-column: 2; }
-  .slot-artist { grid-column: 2; font-size: 1.2rem; }
-  .slot-meta { grid-column: 1 / -1; flex-direction: row; align-items: center; justify-content: space-between; }
+  .slot-artist { font-size: 1.2rem; }
 }
