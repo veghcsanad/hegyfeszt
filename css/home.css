@@ -61,14 +61,16 @@
   font-size: clamp(2rem, 8vw, 4rem);
   line-height: 0.92;
   color: var(--text-primary);
-  flex-shrink: 0;
+  flex-shrink: 1;
+  width: 100%;
+  max-width: 1120px;
   margin-bottom: 0;
 }
 
 .hero__headline img.hero-logo {
   max-width: 100%;
   height: auto;
-  width: clamp(520px, 74vw, 1120px);
+  width: clamp(280px, 74vw, 1120px);
   display: block;
   margin: 0;
 }
@@ -195,6 +197,7 @@
 
 @media (max-width: 768px) {
   .hero__scroll { display: none; }
+  .hero__headline img.hero-logo { width: 100%; }
   .hero__countdown-inline {
     position: static;
     transform: none;
