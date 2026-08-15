@@ -10,10 +10,12 @@ function buildNav(activePage) {
   const inner = document.createElement('div');
   inner.className = 'nav__inner';
 
+  const visibleNavItems = SITE.nav.filter(item => item.visible !== false);
+
   inner.innerHTML = `
     <a class="nav__logo" href="index.html"><img src="${SITE.assets.logo}" alt="Hegyfeszt logo" />HEGY<span>.</span>FESZT</a>
     <ul class="nav__links" id="navLinks">
-      ${SITE.nav.map(item => {
+      ${visibleNavItems.map(item => {
         const isActive = item.href === activePage;
         const isCTA = item.href === 'tickets.html';
         const isExternal = item.href.startsWith('http');
@@ -69,6 +71,8 @@ function buildFooter() {
   const footer = document.getElementById('footer');
   if (!footer) return;
 
+  const visibleNavItems = SITE.nav.filter(item => item.visible !== false);
+
   footer.innerHTML = `
     <div class="container">
       <div class="footer__inner">
@@ -79,7 +83,7 @@ function buildFooter() {
         <div>
           <div class="footer__heading">Navigáció</div>
           <ul class="footer__links">
-            ${SITE.nav.map(item => {
+            ${visibleNavItems.map(item => {
               const isExternal = item.href.startsWith('http');
               const target = isExternal ? ' target="_blank" rel="noopener"' : '';
               return `<li><a class="footer__link" href="${item.href}"${target}>${item.label}</a></li>`;

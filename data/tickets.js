@@ -16,11 +16,6 @@ const TICKETS_DATA = {
     volunteerUrl: "https://docs.google.com/forms/d/e/1FAIpQLSeBC9q8zxwrTE34HDryfhAxuuTcMNxsACRN2H6rkZcZdWPC8Q/viewform",
     addonsLabel: "További jegyek",
     addonsTitle: "Válassz <span class=\"serif\">napijegyet</span> vagy különleges belépőt",
-    campingLabel: "Kemping",
-    campingTitle: "Kempingjegyek a Gran Campinghez",
-    campingUrl: "https://grancamping.hu/",
-    campingButtonLabel: "Gran Camping weboldala",
-    campingNote: "Tixán nem lesznek kint a jegyek, ezeket a kemping pénztárában tudjátok kiváltani.",
     faqLabel: "Gyakran<br>ismételt kérdések",
   },
   notice: "A Kaleidoszkóp Hegy Fesztivál nem tömegrendezvény, hanem találkozópont.",
@@ -89,25 +84,6 @@ const TICKETS_DATA = {
     { id: "house-pass", label: "Kaleidoszkóp Ház pass", price: 5000, description: "Belépés csak a Kaleidoszkóp Ház programjaira az egész hétvégén." },
     { id: "house-day", label: "Kaleidoszkóp Ház napi jegy", price: 2500, description: "Egynapos belépés a Kaleidoszkóp Ház programjaira." },
   ],
-
-  camping: {
-    intro: "A kempingjegyeket közvetlenül a Gran Campingnél tudjátok megváltani.",
-    options: [
-      {
-        label: "Kemping jegy",
-        price: "11000 Ft/fő + 2400 Ft IFA",
-        description: "Teljes fesztiválra szóló kempingbelépő.",
-      },
-      {
-        label: "Napi kemping jegy",
-        price: "4000 Ft/fő + 800 Ft IFA",
-        description: "Egynapos kempingbelépő a fesztivál idejére.",
-      },
-    ],
-    info: [
-      ""
-    ],
-  },
 
   faq: [
     { q: "Vásárolhatok csak egy napra szóló jegyet?", a: "Igen, napi jegyek elérhetők csütörtökre, péntekre és szombatra is." },

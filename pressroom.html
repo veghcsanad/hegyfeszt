@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title></title>
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/pressroom.css">
+</head>
+<body>
+  <nav class="nav scrolled" id="nav"></nav>
+
+  <header class="page-header">
+    <div class="container">
+      <div class="section-label" id="pressroomPageSectionLabel"></div>
+      <h1 class="page-header__title" id="pressroomPageTitle"></h1>
+      <p class="page-header__sub" id="pressroomPageSubtitle"></p>
+    </div>
+  </header>
+
+  <main>
+    <section class="pressroom-section">
+      <div class="container">
+        <div class="pressroom-card reveal">
+          <div class="pressroom-copy">
+            <h2 id="pressroomTitle"></h2>
+            <p id="pressroomDescription"></p>
+          </div>
+          <div class="pressroom-actions">
+            <a class="btn btn--primary" id="downloadPressroom" href="#" download="hegyfeszt_sajtoanyag.zip"></a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer" id="footer"></footer>
+
+  <script src="data/site.js"></script>
+  <script src="data/pressroom.js"></script>
+  <script src="js/global.js"></script>
+  <script src="js/pressroom.js"></script>
+</body>
+</html>

@@ -23,12 +23,13 @@ const SITE = {
     event: "https://fb.me/e/6uHQEwRtd"
   },
   nav: [
-    { label: "Kezdőlap",    href: "index.html" },
-    { label: "Programok",   href: "schedule.html" },
-    { label: "Galéria",     href: "gallery.html" },
-    { label: "Jegyek",       href: "tickets.html" },
-    { label: "Önkéntesség", href: "volunteers.html" },
-    { label: "Rólunk",       href: "about.html" },
+    { label: "Programok",   href: "schedule.html", visible: true },
+    { label: "Galéria",     href: "gallery.html", visible: true },
+    { label: "Jegyek",      href: "tickets.html", visible: true },
+    { label: "Szállás",     href: "camping.html", visible: true },
+    { label: "Sajtószoba",  href: "pressroom.html", visible: true },
+    { label: "Önkéntesség", href: "volunteers.html", visible: true },
+    { label: "Rólunk",      href: "about.html", visible: true },
   ],
   sponsors: [
     { name: "Vincze Nyomda", logo: "sponsors/vincze.png", url: "https://www.vinczenyomda.hu" },
@@ -39,8 +40,8 @@ const SITE = {
     { name: "Vármúzeum", logo: "sponsors/varmuzeum.png", url: "https://www.varmegom.hu/" },
     { name: "Keresztény Múzeum", logo: "sponsors/keresztenymuzeum.png", url: "https://www.keresztenymuzeum.hu" },
     { name: "Kali", logo: "sponsors/kali.png", url: "https://www.kaleidoszkophaz.hu" },
-  { name: "Festify", logo: "sponsors/festify.svg", url: "https://www.festify.hu/" },
-  { name: "Neuzer", logo: "sponsors/neuzer.png", url: "https://neuzer.hu" },
-  { name: "Balzac", logo: "sponsors/balzac.png" }
-],
+    { name: "Festify", logo: "sponsors/festify.svg", url: "https://www.festify.hu/" },
+    { name: "Neuzer", logo: "sponsors/neuzer.png", url: "https://neuzer.hu" },
+    { name: "Balzac", logo: "sponsors/balzac.png" }
+  ],
 };

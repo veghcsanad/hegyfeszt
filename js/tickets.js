@@ -23,45 +23,26 @@ function buildPageHeader() {
   const volunteerLink = document.getElementById('volunteerLink');
   const addonsLabel = document.getElementById('addonsSectionLabel');
   const addonsTitle = document.getElementById('addonsSectionTitle');
-  const campingLabel = document.getElementById('campingSectionLabel');
-  const campingTitle = document.getElementById('campingSectionTitle');
-  const campingIntro = document.getElementById('campingIntro');
-  const campingGrid = document.getElementById('campingGrid');
-  const campingNote = document.getElementById('campingNote');
-  const campingLink = document.getElementById('campingLink');
   const faqTitle = document.getElementById('faqSectionTitle');
   const faqLabel = document.getElementById('faqSectionLabel');
 
   if (sectionLabel) sectionLabel.textContent = page.sectionLabel;
   if (title) title.textContent = page.title;
   if (subtitle) subtitle.textContent = page.notice;
+
   if (buyTicketsLink) {
     buyTicketsLink.textContent = page.buyTicketsLabel;
     buyTicketsLink.href = page.buyTicketsUrl;
   }
+
   if (volunteerLink) {
     volunteerLink.textContent = page.volunteerLabel;
     volunteerLink.href = page.volunteerUrl;
   }
+
   if (addonsLabel) addonsLabel.textContent = page.addonsLabel;
   if (addonsTitle) addonsTitle.innerHTML = page.addonsTitle;
-  if (campingLabel) campingLabel.textContent = page.campingLabel;
-  if (campingTitle) campingTitle.textContent = page.campingTitle;
-  if (campingIntro) campingIntro.textContent = TICKETS_DATA.camping.intro;
-  if (campingGrid) {
-    campingGrid.innerHTML = TICKETS_DATA.camping.options.map(option => `
-      <div class="addon-card camping-card">
-        <div class="addon-label">${option.label}</div>
-        <p class="addon-desc">${option.description}</p>
-        <div class="addon-price">${option.price}</div>
-      </div>
-    `).join('');
-  }
-  if (campingNote) campingNote.textContent = TICKETS_DATA.camping.info.join(' ');
-  if (campingLink) {
-    campingLink.href = page.campingUrl;
-    campingLink.textContent = page.campingButtonLabel;
-  }
+
   if (faqTitle) faqTitle.innerHTML = page.faqLabel;
   if (faqLabel) faqLabel.textContent = '';
 }
