@@ -2,6 +2,20 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860.43 248.2">
   <defs>
     <style>
+      @font-face {
+        font-family: 'Bahnschrift';
+        src: url('../../bahnschrift.ttf') format('truetype');
+        font-style: normal;
+        font-weight: 700;
+      }
+
+      @font-face {
+        font-family: 'Bahnschrift-Bold';
+        src: url('../../bahnschrift.ttf') format('truetype');
+        font-style: normal;
+        font-weight: 700;
+      }
+
       .f {
         letter-spacing: .02em;
       }
